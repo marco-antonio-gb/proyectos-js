@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>001-Contador de clicks</title>
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="style.css" />
+		<title>002-Lista de tareas</title>
+	</head>
 
-  <body>
-    <div class="container">
-      <h1>001-Contador de clicks</h1>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit laborum
-        cupiditate tempora iusto itaque rerum. Aliquid quam in esse distinctio
-        asperiores id voluptas odio minus vitae reprehenderit, dolorem
-        recusandae saepe?
-      </p>
-    </div>
-    <script type="module" src="main.js"></script>
-  </body>
+	<body>
+		<div class="container">
+			<div class="todo-container">
+				<h4 class="todo-title">002-Lista de tareas</h4>
+				<!-- <form id="todo-form"> -->
+				<input
+					id="todo-input"
+					type="text"
+					class="todo-input"
+					placeholder="Agregar tarea..." />
+				<button
+					id="todo-add-button"
+					class="todo-button"
+					type="submit">
+					Agregar
+				</button>
+				<!-- </form> -->
+
+				<ul
+					class="todo-list"
+					id="todo-list-element"></ul>
+				<hr />
+				<button
+					id="todo-reset-button"
+					class="reset-todo-button">
+					Reiniciar
+				</button>
+			</div>
+		</div>
+		<script
+			type="module"
+			src="main.js"></script>
+	</body>
 </html>

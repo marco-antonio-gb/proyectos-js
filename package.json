@@ -1,0 +1,18 @@
+{
+	"name": "proyectos",
+	"version": "1.0.0",
+	"description": "Crea una página web simple con un botón que incremente un contador cada vez que se hace clic en él.",
+	"main": "index.js",
+	"scripts": {
+		"lint": " eslint .",
+		"lint:fix": " eslint . --fix"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@eslint/js": "^9.19.0",
+		"eslint": "^9.19.0",
+		"globals": "^15.14.0"
+	}
+}

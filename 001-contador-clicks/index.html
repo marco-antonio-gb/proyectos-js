@@ -4,18 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>002-Lista de Tareas</title>
+    <title>Clicks counter</title>
   </head>
 
   <body>
     <div class="container">
-      <h1>002-Lista de Tareas (To-Do List)</h1>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit laborum
-        cupiditate tempora iusto itaque rerum. Aliquid quam in esse distinctio
-        asperiores id voluptas odio minus vitae reprehenderit, dolorem
-        recusandae saepe?
-      </p>
+      <h1 class="text-center">Contador de clicks</h1>
+      <div class="counter-container">
+        <div class="text-counter">
+          <span>Valor actual:</span>
+          <span id="counter-value"></span>
+        </div>
+        <div class="counter-buttons">
+          <button class="btn-counter" id="counterButtonAdd">+</button>
+          <button class="btn-counter" id="counterButtonMinus">-</button>
+          <button class="btn-counter" id="counterButtonReset">Reset</button>
+        </div>
+      </div>
     </div>
     <script type="module" src="main.js"></script>
   </body>

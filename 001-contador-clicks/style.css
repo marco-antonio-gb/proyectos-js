@@ -37,6 +37,10 @@ video {
 
 .container {
   padding: 1.5rem;
+
+  .text-center {
+    text-align: center;
+  }
 }
 
 pre {
@@ -48,4 +52,72 @@ pre {
 
 h1 {
   margin-bottom: 5px;
+}
+
+.counter-container {
+  padding: 10px;
+  width: 250px;
+  margin: 0 auto;
+
+  .text-counter {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #7474742c;
+    border: 1px solid #4d4d4d50;
+    padding: 10px;
+    justify-content: center;
+    margin-bottom: 5px;
+    font-size: 20px;
+    vertical-align: middle;
+    gap: 15px;
+
+    #counter-value {
+      font-weight: bold;
+      font-size: 2.1rem;
+      color: #f90;
+
+    }
+  }
+
+  .counter-buttons {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 8px;
+    background-color: #4d4d4d50;
+
+    button {
+      cursor: pointer;
+      background-color: #f90;
+      color: #1c1c1c;
+      font-weight: bold;
+      border: 1px solid #f90;
+      font-size: 1rem;
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    button:hover {
+      border: 1px solid #f79e18;
+      background-color: #ffaf37;
+      color: #000;
+      padding: 5px 10px;
+    }
+
+    button:disabled,
+    button[disabled] {
+      border: 1px solid #99999920;
+      background-color: unset;
+      color: #916016;
+      cursor: no-drop;
+    }
+
+    .btn-counter {
+      padding: 5px 10px;
+
+    }
+  }
 }

@@ -2,50 +2,193 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
-
 /* remove default spacing */
 /* force styling of type through styling, rather than elements */
 * {
-  margin: 0;
-  padding: 0;
-
+	margin: 0;
+	padding: 0;
 }
-
 /* dark mode user-agent-styles */
 html {
-  color-scheme: dark light;
+	color-scheme: dark light;
 }
-
 /* min body height */
 body {
-  min-height: 100vh;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: #e0e0e0;
-  font-size: 100%;
+	min-height: 100vh;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+		'Open Sans', 'Helvetica Neue', sans-serif;
+	color: #e0e0e0;
+	font-size: 100%;
 }
-
 /* responsive images/videos */
 img,
 picture,
 svg,
 video {
-  display: block;
-  max-width: 100%;
+	display: block;
+	max-width: 100%;
 }
-
 .container {
-  padding: 1.5rem;
+	padding: 1.5rem;
 }
-
 pre {
-  background-color: rgb(30, 30, 30);
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 0.95rem;
+	background-color: rgb(30, 30, 30);
+	padding: 10px;
+	border-radius: 8px;
+	font-size: 0.95rem;
 }
-
 h1 {
-  margin-bottom: 5px;
+	margin-bottom: 5px;
+}
+/**custom styles */
+input {
+	box-sizing: border-box;
+	-webkit-transition: 0.25s;
+	transition: 0.25s;
+	outline: none;
+}
+.todo-container {
+	background-color: #1e1e1e;
+	padding: 1rem;
+	border-radius: 8px;
+	width: 100%;
+	max-width: 400px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	hr {
+		border: none;
+		border-top: 1px solid #2b2b2b;
+		margin-block: 20px;
+	}
+	ul {
+		list-style-type: none;
+	}
+	.todo-title {
+		font-size: 1.5rem !important;
+		text-align: center;
+		font-weight: bold;
+		line-height: 1.5;
+		margin-bottom: 10px;
+	}
+	.todo-input {
+		width: 100%;
+		padding: 10px 20px;
+		height: 50px;
+		font-size: 0.95rem;
+		display: block;
+		border-radius: 8px;
+		border-radius: 2rem;
+		border: 2px solid transparent;
+		margin-bottom: 10px;
+		color: #c0c0c0;
+		font-weight: bold;
+	}
+	.todo-input:focus,
+	.todo-input:active {
+		border: 2px solid #1d64e993;
+	}
+	.todo-button {
+		cursor: pointer;
+		width: 100%;
+		margin: 0 auto;
+		background-color: #1d65e9;
+		padding: 0.6rem;
+		border-radius: 2rem;
+		border: 1px solid #1d65e9;
+		text-align: center;
+		line-height: 1;
+		font-size: 0.9rem;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		font-weight: bold;
+		transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+	}
+	.todo-button:hover {
+		background-color: #1657d1;
+		border: 1px solid #1657d1;
+	}
+	.todo-button:active {
+		background-color: #2164e0;
+		border: 1px solid #1c58c7;
+	}
+	.reset-todo-button {
+		cursor: pointer;
+		width: 100%;
+		margin: 0 auto;
+		background-color: #2b2b2b;
+		padding: 0.6rem;
+		border-radius: 2rem;
+		border: 1px solid transparent;
+		text-align: center;
+		line-height: 1;
+		font-size: 0.9rem;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		font-weight: bold;
+		transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+	}
+	.reset-todo-button:hover:not(:disabled) {
+		background-color: #272727;
+	}
+	.reset-todo-button:active:not(:disabled) {
+		background-color: #353535;
+	}
+	button:disabled,
+	button[disabled] {
+		cursor: no-drop;
+	}
+	.todo-list {
+		margin-top: 1.5rem;
+		line-height: 1.5;
+		li:not(:last-child) {
+			margin-bottom: 6px;
+		}
+		li {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			.close-button {
+				cursor: pointer;
+				padding: 8px 13px;
+				text-align: center;
+				background-color: transparent;
+				border: 1px solid transparent;
+				box-sizing: border-box;
+				border-radius: 4px;
+				background-color: #2b2b2b50;
+				font-size: 1rem;
+				line-height: 1;
+				color: #b8210d;
+			}
+			.close-button:hover {
+				border: 1px solid #b8210d60;
+				color: white;
+			}
+		}
+		.todo-item {
+			display: block;
+			user-select: none;
+			cursor: pointer;
+			background-color: #2b2b2b80;
+			border-radius: 6px;
+			padding: 10px;
+			line-height: 1;
+			width: 100%;
+			.todo-status {
+				margin: 0;
+				padding: 0;
+				margin-right: 10px;
+			}
+		}
+		.todo-item.completed {
+			color: #6f6e6e !important;
+			text-decoration: line-through !important;
+		}
+		.todo-item:hover {
+			background-color: #2b2b2b;
+		}
+	}
 }
